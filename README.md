@@ -1,25 +1,15 @@
 ### Hi there 👋
 
-<!--
-**kupp1/kupp1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-
-> I am just a simple Russian girl,  
-> I've got Vodka in my blood,  
-> So I dance with brown bears,  
-> And my soul is torn apart...  
-> &nbsp; -- *one song*
-
-😄 Just kidding  
-![](assets/pheno.png)
+```lisp
+(defun get-about ()
+  (setf lines (make-array '(4)))
+  (setf (aref lines 0) "Name: Dmitry")
+  (setf (aref lines 1) "Surname: Kuperstein")
+  (setf (aref lines 2) "Home town: Saint Petersburg, Russia")
+  (setf (aref lines 3) "Fun fact: it's clisp baby")
+  lines)
+  
+(let ((about (get-about)))
+  (loop for i from 0 to 3 do 
+    (write-line (aref about i))))  
+```
